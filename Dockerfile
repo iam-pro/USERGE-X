@@ -16,6 +16,7 @@ RUN apt -qq update && apt -qq upgrade -y && \
     gnupg2 \
     wget \
     unzip \
+    procps \
     tree
 
 RUN mkdir -p /tmp/ && \
