@@ -90,7 +90,7 @@ async def eval_(message: Message):
         output += f"**>>** ```{evaluation}```"
     if (exc or stderr) and message.chat.type in ("group", "supergroup", "channel"):
         msg_id = await CHANNEL.log(output)
-        await message.edit(f"**Logs**: {CHANNEL.get_link(msg_id)}")
+        await message.edit(f"**Logs**: {output}")
     elif output:
         await message.edit_or_send_as_file(
             text=output, parse_mode="md", filename="eval.txt", caption=cmd
