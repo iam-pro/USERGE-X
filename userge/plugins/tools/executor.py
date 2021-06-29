@@ -39,6 +39,9 @@ CHANNEL = userge.getCLogger()
 )
 async def eval_(message: Message):
     """run python code"""
+    m = message
+    client = userge
+    c = userge
     cmd = await init_func(message)
     if cmd is None:
         return
